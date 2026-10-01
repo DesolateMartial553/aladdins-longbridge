@@ -7,6 +7,9 @@
 <meta name="description" content="Aladdins Longbridge — pizza, kebab and fried chicken takeaway. Order by phone for collection or delivery." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=800" media="(max-width:600px)" fetchpriority="high" />
+<link rel="preload" as="image" href="https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=1280" media="(min-width:601px) and (max-width:1200px)" fetchpriority="high" />
+<link rel="preload" as="image" href="https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=1920" media="(min-width:1201px)" fetchpriority="high" />
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
@@ -42,7 +45,9 @@
   .btn--accent:hover{background:#d68f00;}
   .btn--outline{border:2px solid #fff; color:#fff;}
   .hero{position:relative; min-height:80vh; display:flex; align-items:center; color:#fff; overflow:hidden;}
-  .hero::before{content:"";position:absolute; inset:0; background:url('https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;}
+  .hero::before{content:"";position:absolute; inset:0; background:url('https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=800') center/cover;}
+  @media(min-width:601px){.hero::before{background-image:url('https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=1280');}}
+  @media(min-width:1201px){.hero::before{background-image:url('https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=1920');}}
   .hero::after{content:"";position:absolute; inset:0; background:linear-gradient(100deg, rgba(26,15,10,.92) 30%, rgba(26,15,10,.4) 90%);}
   .hero__inner{position:relative; z-index:2; max-width:580px; padding:80px 24px;}
   .hero__tag{display:inline-block; background:var(--accent2); color:#fff; font-weight:700; font-size:13px; padding:6px 16px; border-radius:999px; margin-bottom:20px;}
@@ -188,7 +193,7 @@
     </div>
     <div class="menu-grid">
       <div class="menu-card reveal">
-        <img src="https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Pepperoni pizza and fried chicken" loading="lazy" />
+        <img src="https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=700" srcset="https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=400 400w, https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=700 700w" sizes="(max-width:600px) 100vw, 380px" width="700" height="525" alt="Pepperoni pizza and fried chicken" loading="lazy" decoding="async" />
         <div class="menu-card__body">
           <h3>🍕 Pizza</h3>
           <!-- PLACEHOLDER: confirm pizza choices, sizes and prices -->
@@ -202,7 +207,7 @@
         </div>
       </div>
       <div class="menu-card reveal">
-        <img src="https://images.pexels.com/photos/29306498/pexels-photo-29306498.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Doner kebab with fries and cola" loading="lazy" />
+        <img src="https://images.pexels.com/photos/29306498/pexels-photo-29306498.jpeg?auto=compress&cs=tinysrgb&w=700" srcset="https://images.pexels.com/photos/29306498/pexels-photo-29306498.jpeg?auto=compress&cs=tinysrgb&w=400 400w, https://images.pexels.com/photos/29306498/pexels-photo-29306498.jpeg?auto=compress&cs=tinysrgb&w=700 700w" sizes="(max-width:600px) 100vw, 380px" width="700" height="1245" alt="Doner kebab with fries and cola" loading="lazy" decoding="async" />
         <div class="menu-card__body">
           <h3>🥙 Kebabs</h3>
           <!-- PLACEHOLDER: confirm kebab choices, portions, accompaniments and prices -->
@@ -216,7 +221,7 @@
         </div>
       </div>
       <div class="menu-card reveal">
-        <img src="https://images.pexels.com/photos/8769141/pexels-photo-8769141.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Fried chicken sandwich" loading="lazy" />
+        <img src="https://images.pexels.com/photos/8769141/pexels-photo-8769141.jpeg?auto=compress&cs=tinysrgb&w=700" srcset="https://images.pexels.com/photos/8769141/pexels-photo-8769141.jpeg?auto=compress&cs=tinysrgb&w=400 400w, https://images.pexels.com/photos/8769141/pexels-photo-8769141.jpeg?auto=compress&cs=tinysrgb&w=700 700w" sizes="(max-width:600px) 100vw, 380px" width="700" height="933" alt="Fried chicken sandwich" loading="lazy" decoding="async" />
         <div class="menu-card__body">
           <h3>🍗 Chicken</h3>
           <!-- PLACEHOLDER: confirm chicken choices, portions and prices -->
@@ -293,7 +298,7 @@
       <!-- /PLACEHOLDER -->
     </div>
     <div class="owner reveal">
-      <img src="https://images.pexels.com/photos/6605421/pexels-photo-6605421.jpeg?auto=compress&cs=tinysrgb&w=500" alt="A cook preparing food in a busy kitchen" loading="lazy" />
+      <img src="https://images.pexels.com/photos/6605421/pexels-photo-6605421.jpeg?auto=compress&cs=tinysrgb&w=500" srcset="https://images.pexels.com/photos/6605421/pexels-photo-6605421.jpeg?auto=compress&cs=tinysrgb&w=300 300w, https://images.pexels.com/photos/6605421/pexels-photo-6605421.jpeg?auto=compress&cs=tinysrgb&w=500 500w" sizes="(max-width:820px) 180px, 220px" width="500" height="750" alt="A cook preparing food in a busy kitchen" loading="lazy" decoding="async" />
       <div>
         <!-- PLACEHOLDER: replace with an approved quote from the owner or kitchen team -->
         <blockquote>"Everything's cooked fresh when you call, not sat under a lamp. That's always been the way we do things here."</blockquote>
@@ -379,7 +384,14 @@
 
 <section id="contact">
   <div class="wrap map-contact reveal">
-    <iframe src="https://maps.google.com/maps?q=Longbridge,+Birmingham&z=15&output=embed" loading="lazy" title="Map to Aladdins Longbridge"></iframe>
+    <div class="map-facade" id="mapFacade" data-src="https://maps.google.com/maps?q=Longbridge,+Birmingham&amp;z=15&amp;output=embed" data-title="Map to Aladdins Longbridge">
+      <div class="map-facade__body">
+        <p class="map-facade__name">Aladdins Longbridge</p>
+        <p class="map-facade__area">Longbridge, Birmingham</p>
+        <button type="button" class="btn btn--accent map-facade__btn" id="mapShowBtn">Show map</button>
+        <a class="map-facade__link" href="https://www.google.com/maps/search/?api=1&amp;query=Aladdins+Longbridge+Birmingham" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
     <div class="contact-cards">
       <div class="info-card">
         <h3>🕒 Opening Hours</h3>
@@ -441,6 +453,35 @@
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+<style>
+  .map-facade{position:relative; width:100%; min-height:260px; border-radius:16px; border:1px solid var(--line); background:linear-gradient(135deg,var(--card),var(--bg)); background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(135deg,var(--card),var(--bg)); background-size:36px 36px,36px 36px,auto; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center;}
+  .map-facade__body{padding:24px; display:flex; flex-direction:column; align-items:center; gap:6px;}
+  .map-facade__name{font-weight:700; font-size:20px; color:#fff;}
+  .map-facade__area{color:var(--muted); margin-bottom:10px;}
+  .map-facade__link{font-weight:700; margin-top:8px; color:var(--accent); text-decoration:underline;}
+  .map-facade__btn:focus-visible,.map-facade__link:focus-visible{outline:3px solid #fff; outline-offset:3px;}
+  .map-facade iframe{position:absolute; inset:0; width:100%; height:100%; border:0; filter:invert(90%) hue-rotate(180deg);}
+  .map-facade.is-loaded .map-facade__body{position:absolute; left:12px; bottom:12px; z-index:2; padding:0; align-items:flex-start;}
+  .map-facade.is-loaded .map-facade__name,.map-facade.is-loaded .map-facade__area,.map-facade.is-loaded .map-facade__btn{display:none;}
+  .map-facade.is-loaded .map-facade__link{background:#0f0906; padding:8px 14px; border-radius:999px; margin:0;}
+</style>
+<script>
+  (function(){
+    var f = document.getElementById('mapFacade'), b = document.getElementById('mapShowBtn');
+    if(!f || !b) return;
+    b.addEventListener('click', function(){
+      var i = document.createElement('iframe');
+      i.src = f.getAttribute('data-src');
+      i.title = f.getAttribute('data-title');
+      i.loading = 'lazy';
+      i.referrerPolicy = 'no-referrer-when-downgrade';
+      f.insertBefore(i, f.firstChild);
+      f.classList.add('is-loaded');
+      i.focus();
+    });
+  })();
 </script>
 
 </body>
