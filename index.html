@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw=' 'sha256-CG+hkz3WEaeS58z7HDYaVoB2Vnbg7JIJu9yCy4dkA38=' 'sha256-tXQWntnXIKH897vQaRlORICfCV/6kflE0xOYm9FgVQM='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-gAIMlo4uHwea7LDSu/hGhLXHg8Iu/WQoVQvXGVLwabA=' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw=' 'sha256-CG+hkz3WEaeS58z7HDYaVoB2Vnbg7JIJu9yCy4dkA38=' 'sha256-tXQWntnXIKH897vQaRlORICfCV/6kflE0xOYm9FgVQM='; style-src 'self' 'sha256-R+hjeguQ03KdUioGtasZBB8eBVWpELd8+J1d5v7D3Ek=' 'sha256-vFzn0W3ZaeR54cYzDw5JviPSyyRa88Hb70+TWqKKbEA='; img-src 'self' data:; font-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
+<script>if (window.top !== window.self) { try { window.top.location.replace(window.self.location.href); } catch (e) { document.documentElement.hidden = true; } }</script>
 <title>Aladdins Longbridge | Pizza, Kebab &amp; Chicken, Birmingham</title>
 <meta name="description" content="Pizza, kebab and fried chicken takeaway in Longbridge, Birmingham. Call Aladdins on 0121 368 8887 to order for collection or delivery." />
 <link rel="canonical" href="https://desolatemartial553.github.io/aladdins-longbridge/" />
@@ -197,6 +198,10 @@
     .btn:hover,.menu-card:hover,.review:hover{transform:none;}
   }
   footer a[href="privacy.html"]{text-decoration:underline; text-underline-offset:3px;}
+  /* Former inline style attributes (moved here for a stricter CSP) */
+  .u-s1{border-color:var(--accent) !important; color:var(--accent) !important;}
+  .u-s2{text-align:center !important; margin-top:36px !important;}
+  .u-s3{margin-top:6px !important;}
 </style>
 </head>
 <body>
@@ -410,8 +415,8 @@
       <div class="review reveal"><div class="stars">★★★★★</div><p>"Chicken is always cooked fresh, you can tell the difference."</p><div class="who"><span class="avatar">M</span> Michelle, local regular</div></div>
       <!-- /PLACEHOLDER -->
     </div>
-    <div style="text-align:center; margin-top:36px;">
-      <a class="btn btn--outline" style="border-color:var(--accent); color:var(--accent);" href="tel:+441213688887">📞 Call to order</a>
+    <div class="u-s2">
+      <a class="btn btn--outline u-s1" href="tel:+441213688887">📞 Call to order</a>
     </div>
   </div>
 </section>
@@ -478,7 +483,7 @@
 
 <footer>
   <p>&copy; 2026 Aladdins Longbridge, Birmingham. · <a href="privacy.html">Privacy notice</a></p>
-  <p style="margin-top:6px;"><a href="tel:+441213688887">0121 368 8887</a> · <a href="#contact">Opening hours &amp; location</a> · <a href="#menu">Menu</a></p>
+  <p class="u-s3"><a href="tel:+441213688887">0121 368 8887</a> · <a href="#contact">Opening hours &amp; location</a> · <a href="#menu">Menu</a></p>
 </footer>
 
 <div class="sticky-cta">
